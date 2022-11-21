@@ -1,0 +1,357 @@
+.webTrader {
+  &__wrapper {
+    padding: 15rem 15rem;
+    @media screen and (max-width: 1700px) {
+      padding: 15rem 5rem;
+    }
+    @include breakpoint-down(laptop) {
+      padding: 15rem 4rem;
+    }
+    @include breakpoint-down(tab) {
+      padding: 15rem 3rem;
+    }
+    @include breakpoint-down(mobile) {
+      padding: 12rem 2rem;
+    }
+  }
+  &__hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10rem;
+    @include breakpoint-down(tab) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-info {
+      flex-basis: 50%;
+      margin-right: 10rem;
+      @include breakpoint-down(laptop) {
+        margin-right: 5rem;
+      }
+      @include breakpoint-down(tab) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 3rem;
+        color: $primary;
+        @include breakpoint-down(tab) {
+          font-size: 3.8rem;
+        }
+        @include breakpoint-down(mobile) {
+          font-size: 3rem;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        color: $gray;
+        margin-bottom: 3rem;
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+      &-btn {
+        display: inline-block;
+        background-color: $primary;
+        padding: 1rem 4rem;
+        text-transform: uppercase;
+        color: #fff;
+        border: 2px solid $primary;
+        font-size: 18px;
+        font-weight: 400;
+
+        @include breakpoint-down(mobile) {
+          padding: 1rem 2rem;
+          font-size: 16px;
+        }
+        &:hover {
+          color: $primary;
+          background-color: transparent;
+        }
+      }
+    }
+    &-img {
+      img {
+        @include breakpoint-down(laptop) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__content {
+    &-props {
+      h2 {
+        font-size: 22px;
+        color: $primary;
+        font-weight: 400;
+        margin-bottom: 5rem;
+        @include breakpoint-down(mobile) {
+          font-size: 18px;
+        }
+      }
+      &-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include breakpoint-down(mobile) {
+          flex-direction: column;
+        }
+        &-item {
+          flex-basis: 45%;
+        }
+      }
+    }
+    &-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2rem;
+      &-box {
+        height: 20px;
+        width: 20px;
+        background: $linear;
+        margin-right: 2rem;
+      }
+      p {
+        flex-basis: 80%;
+        margin-bottom: 0rem !important;
+        font-size: 16px;
+        line-height: 26px;
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+    &-info {
+      h2 {
+        font-size: 22px;
+        color: $primary;
+        font-weight: 400;
+        margin-bottom: 5rem;
+        @include breakpoint-down(mobile) {
+          font-size: 18px;
+        }
+      }
+    }
+    &-text {
+      margin-block: 3rem;
+      p {
+        margin-bottom: 2rem;
+        font-size: 16px;
+        line-height: 26px;
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+.mobileTrader {
+  &__wrapper {
+    padding: 15rem 15rem;
+    @media screen and (max-width: 1700px) {
+      padding: 15rem 5rem;
+    }
+    @include breakpoint-down(laptop) {
+      padding: 15rem 4rem;
+    }
+    @include breakpoint-down(tab) {
+      padding: 15rem 3rem;
+    }
+    @include breakpoint-down(mobile) {
+      padding: 12rem 2rem;
+    }
+  }
+  &__hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10rem;
+    @include breakpoint-down(laptop) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-info {
+      flex-basis: 50%;
+      margin-right: 10rem;
+      @include breakpoint-down(laptop) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+      h2 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 3rem;
+        color: $primary;
+        @include breakpoint-down(tab) {
+          font-size: 3.8rem;
+        }
+        @include breakpoint-down(mobile) {
+          font-size: 3rem;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        color: $gray;
+        margin-bottom: 3rem;
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+      &-btns {
+        @media screen and (max-width: 400px) {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+        button {
+          display: inline-block;
+          padding: 1rem 5rem;
+          text-transform: uppercase;
+
+          border: 2px solid $primary;
+          font-size: 18px;
+          font-weight: 400;
+          &:first-child {
+            margin-right: 3rem;
+            background-color: transparent;
+            color: $primary;
+            @media screen and (max-width: 400px) {
+              margin-right: 0rem;
+            }
+          }
+          &:last-child {
+            background-color: $primary;
+            color: #fff;
+          }
+
+          @include breakpoint-down(mobile) {
+            padding: 1rem 2rem;
+            font-size: 16px;
+          }
+          &:hover {
+            color: $primary;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    &-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__content {
+    &-info {
+      h2 {
+        font-size: 22px;
+        color: $primary;
+        font-weight: 400;
+        margin-bottom: 5rem;
+        @include breakpoint-down(mobile) {
+          font-size: 18px;
+        }
+      }
+      &-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 2rem;
+        &-box {
+          height: 20px;
+          width: 20px;
+          background: $linear;
+          margin-right: 2rem;
+        }
+        p {
+          flex-basis: 80%;
+          margin-bottom: 0rem !important;
+          font-size: 16px;
+          line-height: 26px;
+          @include breakpoint-down(mobile) {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    &-text {
+      margin-block: 3rem;
+      p {
+        margin-bottom: 2rem;
+        font-size: 16px;
+        line-height: 26px;
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.trade {
+  &__wrapper {
+    padding: 15rem 15rem;
+    @media screen and (max-width: 1700px) {
+      padding: 15rem 5rem;
+    }
+    @include breakpoint-down(laptop) {
+      padding: 15rem 4rem;
+    }
+    @include breakpoint-down(tab) {
+      padding: 15rem 3rem;
+    }
+    @include breakpoint-down(mobile) {
+      padding: 12rem 2rem;
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    @include breakpoint-down(laptop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint-down(tab) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-down(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &-item {
+      padding: 3rem 2rem;
+      border: 2px solid $primary;
+      box-shadow: $box-shadow;
+      text-align: center;
+      img {
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 2rem;
+        line-height: 26px;
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,496 @@
+.hero {
+  padding: 0rem 2rem;
+  &__wrapper {
+    background-image: url("../assets/homeheroBg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    padding: 0rem 15rem;
+    @media screen and (max-width: 1700px) {
+      padding: 0rem 4rem;
+    }
+    @include breakpoint-down(tab) {
+      padding: 0rem 3rem;
+      height: 60vh;
+    }
+    @include breakpoint-down(mobile) {
+      padding: 0rem 2rem;
+      height: 50vh;
+    }
+  }
+  &__content {
+    text-align: center;
+    margin-top: 10rem;
+    @include breakpoint-down(tab) {
+      margin-top: 8rem;
+    }
+    @include breakpoint-down(mobile) {
+      margin-top: 5rem;
+    }
+    h2 {
+      font-size: 6rem;
+      line-height: 87px;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      @include breakpoint-down(laptop) {
+        font-size: 5rem;
+      }
+      @include breakpoint-down(tab) {
+        font-size: 4.2rem;
+        line-height: 55px;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 3.2rem;
+        line-height: 45px;
+        br {
+          display: none;
+        }
+      }
+    }
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 26px;
+      color: $black !important;
+      margin-bottom: 5rem;
+      @include breakpoint-down(tab) {
+        font-size: 16px;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    &-Btn {
+      background-color: $primary;
+      padding: 1rem 3rem;
+      color: #fff;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 2px solid #fff;
+      &:hover {
+        background-color: transparent;
+        box-shadow: $box-shadow;
+      }
+      @include breakpoint-down(mobile) {
+        padding: 1rem 2rem;
+        font-size: 16px;
+      }
+    }
+  }
+}
+.homeTrading {
+  padding: 5rem 15rem;
+  @media screen and (max-width: 1700px) {
+    padding: 5rem 4rem;
+  }
+  @include breakpoint-down(tab) {
+    padding: 5rem 3rem;
+  }
+  @include breakpoint-down(mobile) {
+    padding: 5rem 2rem;
+  }
+  &__heading {
+    margin-bottom: 5rem;
+    h2 {
+      font-size: 3.8rem;
+      color: $primary;
+      text-transform: uppercase;
+      font-weight: 300 !important;
+      margin-bottom: 1rem;
+      @include breakpoint-down(tab) {
+        font-size: 3.4rem;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 3rem;
+      }
+      span {
+        font-weight: 700 !important;
+        text-transform: none;
+      }
+    }
+    p {
+      color: $gray;
+      font-size: 16px;
+      line-height: 26px;
+      @include breakpoint-down(tab) {
+        br {
+          display: none;
+        }
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap: 2rem;
+    @include breakpoint-down(tab) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__item {
+    &-heading {
+      background-color: $primary;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 2rem 3rem;
+      margin-bottom: 1rem;
+      img {
+        margin-right: 2rem;
+      }
+      h2 {
+        font-size: 18px;
+        font-weight: 400;
+        color: $white;
+        @include breakpoint-down(mobile) {
+          font-size: 15px;
+        }
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      @include breakpoint-down(mobile) {
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+  }
+}
+.tradeN {
+  background-color: #cacaca;
+  padding: 5rem 15rem;
+  @media screen and (max-width: 1700px) {
+    padding: 5rem 4rem;
+  }
+  @include breakpoint-down(tab) {
+    padding: 5rem 3rem;
+  }
+  @include breakpoint-down(mobile) {
+    padding: 5rem 2rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint-down(tab) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-info {
+      margin-right: 5rem;
+      @include breakpoint-down(tab) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+      h2 {
+        font-size: 22px;
+        font-weight: 800;
+        color: $primary;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 16px;
+        color: $gray;
+        margin-bottom: 1rem;
+      }
+      &-btn {
+        display: inline-block;
+        background-color: $primary;
+        padding: 1.5rem 4rem;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $white;
+        border: 2px solid $primary;
+        margin-bottom: 1rem;
+        &:hover {
+          color: $primary;
+          background-color: transparent;
+        }
+      }
+      h4 {
+        font-size: 12px;
+        color: $gray;
+      }
+    }
+    &-img {
+      img {
+        @include breakpoint-down(tab) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.broker {
+  padding: 10rem 15rem;
+  @media screen and (max-width: 1700px) {
+    padding: 10rem 4rem;
+  }
+  @include breakpoint-down(tab) {
+    padding: 8rem 3rem;
+  }
+  @include breakpoint-down(mobile) {
+    padding: 5rem 2rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    @include breakpoint-down(tab) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &-img {
+      flex-basis: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    &-info {
+      flex-basis: 45%;
+      margin-left: 10rem;
+      @include breakpoint-down(tab) {
+        margin-left: 0rem;
+        margin-bottom: 5rem;
+      }
+
+      h2 {
+        font-size: 3.4rem;
+        font-weight: 500;
+        color: $primary;
+        margin-bottom: 2rem;
+        @include breakpoint-down(tab) {
+          font-size: 3rem;
+        }
+        @include breakpoint-down(mobile) {
+          font-size: 2.8rem;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 2rem;
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+.slider {
+  margin-block: 5rem;
+  position: relative;
+  .rec.rec-arrow {
+    display: none;
+  }
+  .rec.rec-pagination {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include breakpoint-down(tab) {
+      bottom: 0px;
+    }
+  }
+  .rec {
+    z-index: 100;
+  }
+  .rec .rec-slider-container {
+    margin: 0 0px;
+  }
+  .rec .rec-dot_active {
+    background-color: $primary;
+    box-shadow: 0 0 1px 2px rgba(9, 124, 231, 0.3);
+  }
+  .rec .rec-dot {
+    z-index: 100;
+    box-shadow: 0 0 1px 2px rgba(9, 124, 231, 0.3);
+    bottom: 0px;
+  }
+  &__single {
+    background-color: #cacaca;
+    height: 500px;
+    @include breakpoint-down(tab) {
+      height: 100%;
+    }
+    &-content {
+      display: flex;
+      flex-direction: row;
+      @include breakpoint-up(laptop) {
+        align-items: center;
+      }
+      @include breakpoint-down(tab) {
+        flex-direction: column;
+      }
+      &-info {
+        flex-basis: 50%;
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @include breakpoint-down(tab) {
+          padding: 5rem 2rem;
+          align-items: center;
+          text-align: center;
+        }
+        h2 {
+          font-size: 3rem;
+          color: $primary;
+          font-weight: 400;
+          text-transform: uppercase;
+          margin-bottom: 2rem;
+          @include breakpoint-down(tab) {
+            font-size: 2.6rem;
+          }
+          @include breakpoint-down(mobile) {
+            font-size: 2.2rem;
+          }
+        }
+        h4 {
+          font-size: 18px;
+          margin-bottom: 1rem;
+          font-weight: 400;
+        }
+        hr {
+          border: 1px solid $primary;
+          margin-block: 2rem;
+          width: 100%;
+        }
+        .btn-flex {
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+          align-items: center;
+          @include breakpoint-down(mobile) {
+            flex-direction: column;
+            gap: 1rem;
+          }
+          p {
+            font-size: 14px;
+            color: $black;
+          }
+        }
+        .icon2 {
+          @include breakpoint-down(mobile) {
+            width: 100%;
+          }
+        }
+        &-btn {
+          padding: 1rem 4rem;
+          display: inline-block;
+          color: #fff;
+          text-transform: uppercase;
+          background-color: $primary;
+          border: 2px solid $primary;
+          font-size: 16px;
+          &:hover {
+            background-color: transparent;
+            color: $primary;
+          }
+        }
+      }
+      &-img {
+        flex-basis: 50%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.step {
+  padding: 10rem 5rem;
+  @include breakpoint-down(laptop) {
+    padding: 10rem 4rem;
+  }
+  @include breakpoint-down(tab) {
+    padding: 8rem 3rem;
+  }
+  @include breakpoint-down(mobile) {
+    padding: 5rem 2rem;
+  }
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 1400px) {
+      flex-direction: column;
+    }
+    &-heading {
+      flex-basis: 20%;
+      font-size: 3.4rem;
+      font-weight: 600;
+      color: $primary;
+      margin-right: 5rem;
+      @media screen and (max-width: 1400px) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+      @include breakpoint-down(tab) {
+        font-size: 3rem;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 2.8rem;
+      }
+    }
+  }
+  &__content {
+    flex-basis: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    @include breakpoint-down(tab) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-down(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      justify-content: center;
+      border: 2px solid $primary;
+      text-align: center;
+      img {
+        margin-bottom: 2rem;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 500;
+        color: $primary;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        @include breakpoint-down(tab) {
+          br {
+            display: none;
+          }
+        }
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

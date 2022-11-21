@@ -1,0 +1,237 @@
+.accounts {
+  &__wrapper {
+    padding: 15rem 15rem;
+    @media screen and (max-width: 1700px) {
+      padding: 15rem 5rem;
+    }
+    @include breakpoint-down(laptop) {
+      padding: 15rem 4rem;
+    }
+    @include breakpoint-down(tab) {
+      padding: 15rem 3rem;
+    }
+    @include breakpoint-down(mobile) {
+      padding: 12rem 2rem;
+    }
+  }
+  &__content {
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: $primary;
+
+      @include breakpoint-down(mobile) {
+        font-size: 18px;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      color: $gray;
+
+      @include breakpoint-down(mobile) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    &-items {
+      margin-block: 3rem;
+    }
+    &-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2rem;
+      &-box {
+        height: 20px;
+        width: 20px;
+        background: $linear;
+        margin-right: 2rem;
+      }
+      p {
+        flex-basis: 85%;
+        font-size: 16px;
+        line-height: 26px;
+        color: $gray;
+
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+.hero__heading {
+  margin-bottom: 5rem;
+  h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: $primary;
+    @include breakpoint-down(tab) {
+      font-size: 3.8rem;
+    }
+    @include breakpoint-down(mobile) {
+      font-size: 3rem;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    color: $gray;
+    margin-bottom: 1rem;
+    @include breakpoint-down(mobile) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+.accTypes {
+  padding: 15rem 15rem;
+  @media screen and (max-width: 1700px) {
+    padding: 15rem 5rem;
+  }
+  @include breakpoint-down(laptop) {
+    padding: 15rem 4rem;
+  }
+  @include breakpoint-down(tab) {
+    padding: 15rem 3rem;
+  }
+  @include breakpoint-down(mobile) {
+    padding: 12rem 2rem;
+  }
+  &__content {
+    &-table {
+      margin-block: 5rem;
+      @include breakpoint-down(tab) {
+        overflow-x: auto;
+      }
+      &-content {
+        width: 100%;
+        border: 2px solid $primary;
+        border-spacing: 0;
+        padding: 1rem;
+        &-btn {
+          display: inline-block;
+          padding: 1rem 3rem;
+          color: #fff;
+          background-color: $primary;
+          border: 2px solid $primary;
+          font-size: 16px;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+          line-height: 24px;
+          text-align: center;
+          @include breakpoint-down(laptop) {
+            padding: 1rem;
+            font-size: 14px;
+          }
+          &:hover {
+            background-color: transparent;
+            color: $primary;
+          }
+        }
+        thead {
+          background: #fff;
+          border: none;
+          border-spacing: 0px;
+        }
+        th {
+          font-size: 20px;
+          font-weight: 700;
+          text-transform: uppercase;
+          padding: 2rem 2rem;
+          color: $primary;
+          text-align: left;
+        }
+        tbody {
+          tr {
+            &:nth-child(odd) {
+              background-color: #e7e7e7;
+            }
+          }
+          td {
+            &:first-child {
+              background-color: #e7e7e7;
+            }
+          }
+          td {
+            &:last-child {
+              background-color: #e7e7e7;
+            }
+          }
+          td {
+            font-size: 16px;
+            padding: 1rem 2rem;
+
+            @include breakpoint-down(tab) {
+              br {
+                display: block;
+              }
+              font-size: 14px;
+              padding: 1rem;
+            }
+            svg {
+              font-size: 2rem;
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    &-info {
+      &-heading {
+        font-size: 22px;
+        font-weight: 400;
+        color: $primary;
+        margin-bottom: 5rem;
+        @include breakpoint-down(mobile) {
+          font-size: 18px;
+        }
+      }
+      &-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include breakpoint-down(tab) {
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+        }
+        margin-bottom: 5rem;
+        img {
+          margin-right: 2rem;
+          @include breakpoint-down(tab) {
+            margin-right: 0rem;
+            margin-bottom: 2rem;
+          }
+        }
+        &-info {
+          display: flex;
+          flex-direction: column;
+          h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: $black;
+            margin-bottom: 1rem;
+            @include breakpoint-down(mobile) {
+              font-size: 16px;
+            }
+          }
+          p {
+            font-size: 16px;
+            line-height: 26px;
+            @include breakpoint-down(small) {
+              font-size: 14px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.resources {
+  padding: 15rem 15rem;
+  @media screen and (max-width: 1700px) {
+    padding: 15rem 5rem;
+  }
+  @include breakpoint-down(laptop) {
+    padding: 15rem 4rem;
+  }
+  @include breakpoint-down(tab) {
+    padding: 15rem 3rem;
+  }
+  @include breakpoint-down(mobile) {
+    padding: 12rem 2rem;
+  }
+  &__heading {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 5rem;
+    color: $primary;
+    @include breakpoint-down(tab) {
+      font-size: 3.8rem;
+    }
+    @include breakpoint-down(mobile) {
+      font-size: 3rem;
+    }
+  }
+  &__content {
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: $primary;
+      @include breakpoint-down(mobile) {
+        font-size: 18px;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      color: $gray;
+      margin-bottom: 1.5rem;
+      @include breakpoint-down(mobile) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    ul {
+      margin: 5rem 0rem 5rem 5rem;
+      @include breakpoint-down(mobile) {
+        margin: 5rem 0rem 5rem 2rem;
+      }
+      li {
+        font-size: 16px;
+        margin-bottom: 2rem;
+        color: $gray;
+        @include breakpoint-down(mobile) {
+          font-size: 14px;
+        }
+        &::marker {
+          color: $primary;
+          font-size: 2rem;
+        }
+      }
+    }
+    table {
+      width: 100%;
+      margin-block: 3rem;
+      text-align: center;
+      border-spacing: 0px;
+      overflow-x: scroll;
+      thead {
+        background: $primary;
+        border: none;
+        border: 1px solid $primary;
+      }
+      th {
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 2rem;
+        color: #fff;
+        background-color: $primary;
+      }
+      td {
+        font-size: 1.4rem;
+        padding: 2rem 1rem;
+        color: $gray;
+        border: 1px solid $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.footer {
+  position: relative;
+  background-image: url("../assets//footerImg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  &__wrapper {
+    position: relative;
+    z-index: 100;
+    padding: 10rem 15rem 5rem;
+    @media screen and (max-width: 1700px) {
+      padding: 10rem 3rem 5rem;
+    }
+    @include breakpoint-down(tab) {
+      padding: 8rem 2rem 5rem;
+    }
+    @include breakpoint-down(mobile) {
+      padding: 5rem 1rem;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    @include breakpoint-down(tab) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      justify-items: center;
+    }
+    @include breakpoint-down(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-single {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 6px;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+      a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__risk {
+    margin-bottom: 10rem;
+    h2 {
+      border-top: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      padding: 1rem 0rem;
+      margin-bottom: 2rem;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 400;
+      text-transform: uppercase;
+      @include breakpoint-down(mobile) {
+        font-size: 18px;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      color: #fff;
+      margin-bottom: 1rem;
+      @include breakpoint-down(mobile) {
+        font-size: 14px;
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+  }
+}
